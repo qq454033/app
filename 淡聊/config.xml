@@ -1,0 +1,77 @@
+<widget id="A6119819319982" version="0.0.1">
+
+	<name>淡聊</name>
+
+	<description>Example For APICloud.</description>
+
+	<author email="developer@apicloud.com" href="http://www.apicloud.com">Developer</author>
+
+	<content src="index.html"/>
+
+	<preference name="pageBounce" value="false"/>
+
+	<preference name="appBackground" value="rgba(0,0,0,0.0)"/>
+
+	<preference name="windowBackground" value="rgba(0,0,0,0.0)"/>
+
+	<preference name="frameBackgroundColor" value="rgba(0,0,0,0.0)"/>
+
+	<preference name="hScrollBarEnabled" value="false"/>
+
+	<preference name="vScrollBarEnabled" value="false"/>
+
+	<preference name="autoLaunch" value="true"/>
+
+	<preference name="fullScreen" value="false"/>
+
+	<preference name="autoUpdate" value="true"/>
+
+	<preference name="smartUpdate" value="false"/>
+
+	<preference name="debug" value="true"/>
+
+	<preference name="statusBarAppearance" value="true"/>
+
+	<permission name="contact"/>
+
+	<permission name="readPhoneState"/>
+
+	<permission name="camera"/>
+
+	<permission name="record"/>
+
+	<permission name="location"/>
+
+	<permission name="fileSystem"/>
+
+	<permission name="internet"/>
+
+	<permission name="bootCompleted"/>
+
+	<permission name="hardware"/>
+
+	<access origin="*"/>
+
+
+	<feature name="DVContacts">
+
+		<param name="allContacts" value="allContacts(params, callback(ret,err))"/>
+
+	</feature>
+
+	<feature name="mam">
+
+		<param name="checkUpdate" value="callback(ret, err)"/>
+
+	</feature>
+
+	<feature name="WXPhotoPicker">
+
+		<param name="scan" value="scan({params}, callback(ret))"/>
+		  <feature name="aMapLBS"> 
+    <param name="android_api_key" value="7d6596a4452d43f413f7faab9508d59d"/>  
+    <param name="ios_api_key" value="d49fcd5b91626087abbc4d68481f182d"/> 
+
+	</feature>
+
+</widget>

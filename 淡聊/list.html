@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jq.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/icons-extra.css" />
+	</head>
+	<style>
+		.head {
+			display: flex;
+			padding: 0;
+			margin: 0;
+		}
+
+		.headd {
+			display: flex;
+			flex-wrap: wrap;
+			padding: 0;
+			margin: 0;
+		}
+
+		.footer {
+			display: flex;
+			padding: 0;
+			margin: 0;
+		}
+
+		.footer>li {
+			width: 33%;
+			list-style-type: none;
+			text-align: center;
+		}
+
+		.footer>li>img {
+			position: relative;
+			top: 5px;
+			display: block;
+			width: 23px;
+			margin: 0 auto;
+		}
+
+		.footer>li>span {
+			position: relative;
+			color: #5d5d5d;
+			bottom: 15px;
+			font-size: 13px;
+		}
+
+		.headd>li:nth-child(odd) {
+			padding: 0 5px 0 10px;
+		}
+
+		.headd>li:nth-child(even) {
+			padding: 0 10px 0 5px;
+		}
+
+		.head li {
+			display: flex;
+			width: 32%;
+			color: #949494;
+			height: 20px;
+			font-size: 14px;
+			line-height: 20px;
+			list-style-type: none;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.zhan {
+			position: relative;
+			display: flex;
+			width: 50%;
+			height: 200px;
+			/* padding: 0 8px 0 10px; */
+			margin-bottom: 15%;
+			color: #fff;
+		}
+
+		.zhan img {
+			width: 100%;
+			border-radius: 10px;
+		}
+
+		.zhan p {
+			width: 85%;
+			position: absolute;
+			margin-top: auto;
+			margin-bottom: auto;
+			bottom: -23%;
+			right: 7%;
+		}
+
+		.zw {
+			color: #000;
+			display: block;
+		}
+
+		.zw>span {
+			float: right;
+			font-size: 16px;
+		}
+
+		.zw>span>img {
+			position: relative;
+			width: 19px;
+			border-radius: 0;
+			top: 2px;
+		}
+
+		footer {
+			position: fixed;
+			width: 100%;
+			height: 50px;
+			line-height: 59px;
+			bottom: -1px;
+			background: #fff;
+			border-top: 1px solid #d6d6d6;
+		}
+
+		.sho {
+			background: url(images/sho.png) no-repeat center;
+		}
+
+		.footer>li>.zj {
+			position: relative;
+			width: 50px;
+			top: -13px;
+			border-radius: 60%;
+			background: #505050;
+			border: 5px solid #ffffff;
+			box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.42);
+		}
+
+		.yuan {
+			position: relative;
+			top: 12px;
+			right: 28px;
+			display: block;
+			width: 29px;
+			height: 18px;
+			border-radius: 0 0 50px 50px;
+			border: 3px solid #8a6de9;
+			border-top: 0;
+			-webkit-clip-path: inset(30% 0 0 0);
+			clip-path: inset(60% 0 0 0);
+		}
+		.mui-table-view.mui-grid-view .mui-table-view-cell{
+			font-size: 10px;
+		}
+		.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body{
+			font-size: 11px;
+		}
+		.mui-grid-view.mui-grid-9 .mui-table-view-cell{
+			border: 0px;
+			padding: 3px 15px;
+		}
+		.mui-grid-view.mui-grid-9{
+			background-color: #fff;
+		}
+		.mui-search .mui-placeholder{
+			font-size: 12px;
+			text-align: left;
+			margin-left: 15px;
+		}
+		.mui-search .mui-placeholder .mui-icon{
+			font-size: 15px;
+		}
+		.mui-grid-view.mui-grid-9{
+			border-top:0px
+		}
+		.mui-content>.mui-table-view:first-child{
+			margin-top: 0px;
+		}
+	</style>
+
+	<body style="background: #fff;">
+		<header style="padding-top:15px;height:50px;background: #fff;box-shadow: none;">
+			<!-- <ul class="head">
+				<li>
+					<img src="images/so.png" style="width: 16px;" />
+					<span class="mui-icon mui-icon-search"></span>
+				</li>
+				<li>关注</li>
+				<li>热门<i class="yuan"></i></li>
+				<li>新人</li>
+				<li>颜值</li>
+				<li>才华</li>
+			</ul> -->
+			<ul class="head">
+				<li style="width: 90%;">
+					<div class="mui-input-row mui-search" style="width: 95%;">
+						<input type="search" class="mui-input-clear" placeholder="清输入昵称/ID" style="margin-bottom:auto;height: 30px;border-radius: 20px;" disabled="">
+					</div>
+				</li>
+				<li  style="width: 10%;">
+					<span class="mui-icon mui-icon-videocam" style="font-weight: 700;"></span>
+				</li>
+			</ul>
+				
+		</header>
+		<div class="mui-content" style="margin-bottom: 10px;background-color: #fff;">
+			<ul class="mui-table-view mui-grid-view mui-grid-9 mui-content-padded">
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3" style="width: 20%;">
+					<a href="#">
+						<span class="mui-icon mui-icon-contact" style="color: red;font-weight: 700;"></span>
+						<div class="mui-media-body">颜值</div>
+					</a>
+					
+					</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"  style="width: 20%;"><a href="#">
+						<span class="mui-icon mui-icon-person" style="color: blue;font-weight: 700;"></span>
+						<div class="mui-media-body">男神</div>
+					</a></li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"  style="width: 20%;"><a href="#">
+						<span class="mui-icon mui-icon-star" style="color: yellow;font-weight: 700;"></span>
+						<div class="mui-media-body">新星</div>
+					</a></li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"  style="width: 20%;"><a href="#">
+						<span class="mui-icon mui-icon-mic" style="color: #8a6de9;font-weight: 700;"></span>
+						<div class="mui-media-body">才艺</div>
+					</a></li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"  style="width: 20%;"><a href="#">
+						<span class="mui-icon-extra mui-icon-extra-custom" style="color: orchid;font-weight: 700;"></span>
+						<div class="mui-media-body">脱口秀</div>
+					</a></li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3"  style="width: 20%;"><a href="#">
+						<span class="mui-icon-extra mui-icon-extra-grech" style="color: #8a6de9;font-weight: 700;"></span>
+						<div class="mui-media-body">游戏</div>
+					</a></li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3" style="width: 20%;"><a href="#">
+						<span class="mui-icon mui-icon-gear" style="color: red;font-weight: 700;"></span>
+						<div class="mui-media-body">种草</div>
+					</a></li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3" style="width: 20%;"><a href="#">
+						<span class="mui-icon-extra mui-icon-extra-peoples" style="color: orchid;font-weight: 700;"></span>
+						<div class="mui-media-body">明星</div>
+					</a></li>
+					<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3" style="width: 20%;"><a href="#">
+							<span class="mui-icon-extra mui-icon-extra-at" style="color: yellow;font-weight: 700;"></span>
+							<div class="mui-media-body">大V直播</div>
+						</a></li>
+						<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3" style="width: 20%;"><a href="#">
+								<span class="mui-icon-extra mui-icon-extra-notice" style="color: blue;font-weight: 700;"></span>
+								<div class="mui-media-body">正能量</div>
+							</a></li>
+			</ul>
+		</div>
+		<div style="margin-bottom: 20%;">
+			<ul class="headd">
+				<li class="zhan"><img src="images/1.jpg">
+					<p><span class="zw">baby
+							<span>
+								<!-- <img src="images/yh.png" style="width: 17px;" /> -->
+								<span class="mui-icon mui-icon-eye"></span>
+								1364</span>
+						</span><span>深圳</span></p>
+
+				</li>
+				<li class="zhan"><img src="images/2.jpg">
+					<p><span class="zw">小野猫
+							<span>
+								<!-- <img src="images/yh.png" style="width: 17px;" /> -->
+								<span class="mui-icon mui-icon-eye"></span>
+								1279</span>
+						</span><span>广州</span></p>
+				</li>
+				<li class="zhan"><img src="images/3.jpg">
+					<p><span class="zw">苏老师
+							<span>
+								<!-- <img src="images/yh.png" style="width: 17px;" /> -->
+								<span class="mui-icon mui-icon-eye"></span>
+								1246</span>
+						</span><span>河南</span></p>
+				</li>
+				<li class="zhan"><img src="images/4.jpg">
+					<p><span class="zw">宝宝
+							<span>
+								<!-- <img src="images/yh.png" style="width: 17px;" /> -->
+								<span class="mui-icon mui-icon-eye"></span>
+								1068</span>
+						</span><span>武汉</span></p>
+				</li>
+				<li class="zhan"><img src="images/5.jpg">
+					<p><span class="zw">小纯儿很乖
+							<span>
+								<!-- <img src="images/yh.png" style="width: 17px;" /> -->
+								<span class="mui-icon mui-icon-eye"></span>
+								994</span>
+						</span><span>四川</span></p>
+				</li>
+				<li class="zhan"><img src="images/6.jpg">
+					<p><span class="zw">小可爱
+							<span>
+								<!-- <img src="images/yh.png" style="width: 17px;" /> -->
+								<span class="mui-icon mui-icon-eye"></span>
+								854</span>
+						</span><span>西安</span></p>
+				</li>
+			</ul>
+		</div>
+
+		<footer>
+			<ul class="footer">
+				<li>
+					<img src="images/shouye.png">
+
+					<span>首页</span></li>
+				<li><img src="images/ax.png"><span>匹配</span></li>
+				<li><img src="images/jia.png" class="zj"></li>
+				<li><img src="images/sx.png"><span>消息</span></li>
+				<li><img src="images/w.png"><span>我</span></li>
+			</ul>
+		</footer>
+<script>
+	mui('body').on('tap', 'li', function() {                                        
+	        mui.toast("本平台已停止运营");
+	});
+</script>
+	</body>
+
+</html>
